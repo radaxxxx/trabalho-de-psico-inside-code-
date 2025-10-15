@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>InsideCode: Dilemas de um Dev</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div id="app">
+    <header>
+        <h1>InsideCode</h1>
+        <p class="subtitle">Dilemas de um Dev — narrativa interativa</p>
+    </header>
+
+    <main>
+    <section id="ui-left">
+        <div id="scene-box">
+        <div id="scene-text" aria-live="polite"></div>
+        </div>
+
+        <div id="choices" role="list"></div>
+
+        <div id="controls">
+        <button id="save-btn">Salvar</button>
+        <button id="load-btn">Carregar</button>
+        <button id="reset-btn">Reiniciar</button>
+        </div>
+    </section>
+
+    <aside id="ui-right">
+        <div class="stat-card">
+        <h3>Status do Projeto</h3>
+        <div class="stat">
+            <label>Moral da Equipe</label>
+            <progress id="moral-bar" max="100" value="70"></progress>
+            <span id="moral-val">70</span>
+        </div>
+        <div class="stat">
+            <label>Qualidade do Código</label>
+            <progress id="code-bar" max="100" value="70"></progress>
+            <span id="code-val">70</span>
+        </div>
+        <div class="stat">
+            <label>Seu Estresse</label>
+            <progress id="stress-bar" max="100" value="40"></progress>
+            <span id="stress-val">40</span>
+        </div>
+        <div class="stat">
+            <label>Confiança do Gestor</label>
+            <progress id="manager-bar" max="100" value="60"></progress>
+            <span id="manager-val">60</span>
+        </div>
+        </div>
+
+        <div class="meta-card">
+        <h3>Meta</h3>
+        <p>Sprint atual: <strong id="sprint-num">1</strong> / <span id="sprint-total">3</span></p>
+        <p>Decisões tomadas: <span id="decisions-count">0</span></p>
+        </div>
+
+        <div class="log-card">
+        <h3>Registro</h3>
+        <div id="event-log"></div>
+        </div>
+    </aside>
+    </main>
+
+    <footer>
+    <small>Protótipo — InsideCode. Faça escolhas — cada decisão tem consequência.</small>
+    </footer>
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>
